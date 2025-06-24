@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -15,7 +16,6 @@
       position: relative;
     }
 
-    /* затемнение для читаемости текста */
     body::before {
       content: "";
       position: fixed;
@@ -27,40 +27,69 @@
     .container {
       position: relative;
       z-index: 1;
-      max-width: 600px;
+      max-width: 900px;
       margin: 4em auto;
       padding: 2em;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
-      text-align: center;
       backdrop-filter: blur(8px);
     }
 
-    .cat {
-      width: 220px;
+    .product {
+      background: rgba(255,255,255,0.1);
+      padding: 1.5em;
       border-radius: 12px;
-      margin-bottom: 1em;
+      margin-bottom: 2em;
+      display: flex;
+      align-items: center;
+      gap: 2em;
+    }
+
+    .product img {
+      width: 200px;
+      border-radius: 12px;
+    }
+
+    .product-info {
+      flex: 1;
     }
 
     .buy-button {
       background-color: #ff69b4;
       color: white;
-      padding: 12px 24px;
+      padding: 10px 20px;
       font-size: 16px;
       border: none;
       border-radius: 8px;
-      margin-top: 20px;
+      margin-top: 10px;
       cursor: pointer;
-      transition: background 0.3s;
     }
 
-    .buy-button:hover {
-      background-color: #ff409f;
+    .reviews {
+      margin-top: 3em;
+    }
+
+    .review {
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.1);
+      padding: 1em;
+      border-radius: 10px;
+      margin-bottom: 1em;
+      gap: 1em;
+    }
+
+    .review img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .review p {
+      margin: 0;
     }
   </style>
-
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99999999-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -72,13 +101,54 @@
 <body>
   <div class="container">
     <h1>NFT Cats Market</h1>
-    <p>Прокачай своего игрового персонажа с боевым NFT-котом 9 уровня!</p>
-    <img src="https://placekitten.com/300/300" alt="NFT Cat" class="cat" />
-    <div>
-      <button class="buy-button">Купить за криптовалюту</button>
+    <p>Эксклюзивные NFT-коты в боевом стиле для прокачки вашего персонажа и статуса!</p>
+
+    <div class="product">
+      <img src="https://placekitten.com/300/300" alt="Кот-Самурай" />
+      <div class="product-info">
+        <h2>Кот-Самурай</h2>
+        <p>Редкий NFT-кот в доспехах эпохи Мэйдзи. Увеличивает харизму и уровень удачи в PvP на 15%.</p>
+        <p><strong>Цена: $100</strong></p>
+        <button class="buy-button">Купить за криптовалюту</button>
+        <p style="margin-top: 0.5em;">Кошелёк: <span id="wallet-address">Загрузка...</span></p>
+      </div>
     </div>
-    <p style="margin-top: 1em;">Отправьте оплату на адрес:</p>
-    <div id="wallet-address" style="font-weight: bold;">Загрузка...</div>
+
+    <div class="product">
+      <img src="https://placekitten.com/301/301" alt="Кот-хакер" />
+      <div class="product-info">
+        <h2>Кот-хакер</h2>
+        <p>Легендарный NFT-кот в худи. Даёт бонус к скрытности и скорости взлома сейфов в игровых мирах.</p>
+        <p><strong>Цена: $100</strong></p>
+        <button class="buy-button">Купить за криптовалюту</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://placekitten.com/302/302" alt="Киберкотик" />
+      <div class="product-info">
+        <h2>Киберкотик</h2>
+        <p>Неоновый мех, лазерные глаза. Этот NFT дарует +10 к стилю и включает доступ к VR-арене.</p>
+        <p><strong>Цена: $100</strong></p>
+        <button class="buy-button">Купить за криптовалюту</button>
+      </div>
+    </div>
+
+    <div class="reviews">
+      <h2>Отзывы наших клиентов</h2>
+      <div class="review">
+        <img src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Tiger" alt="Tiger avatar">
+        <p><strong>TigerGamer:</strong> Кот-хакер просто топ! Появилась пассивка на взлом чатов 🤖</p>
+      </div>
+      <div class="review">
+        <img src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Bunny" alt="Bunny avatar">
+        <p><strong>CryptoBunny:</strong> Купила киберкотика — и сразу стала MVP на арене 😻</p>
+      </div>
+      <div class="review">
+        <img src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Fox" alt="Fox avatar">
+        <p><strong>FoxTail:</strong> Взял кота-самурая — противники падают от страха 💥</p>
+      </div>
+    </div>
   </div>
 
   <script src="payment.js"></script>
