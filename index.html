@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>NFT Cats Market</title>
+  <title>NFT CATS MARKET</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     body {
       margin: 0;
@@ -34,6 +34,13 @@
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
       backdrop-filter: blur(8px);
+      text-align: center;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
     }
 
     .product {
@@ -53,6 +60,7 @@
 
     .product-info {
       flex: 1;
+      text-align: left;
     }
 
     .buy-button {
@@ -64,6 +72,12 @@
       border-radius: 8px;
       margin-top: 10px;
       cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .buy-button:hover {
+      background-color: #ff409f;
+      transform: scale(1.05);
     }
 
     .reviews {
@@ -78,6 +92,7 @@
       border-radius: 10px;
       margin-bottom: 1em;
       gap: 1em;
+      text-align: left;
     }
 
     .review img {
@@ -100,37 +115,37 @@
 </head>
 <body>
   <div class="container">
-    <h1>NFT Cats Market</h1>
-    <p>Эксклюзивные NFT-коты в боевом стиле для прокачки вашего персонажа и статуса!</p>
+    <h1>NFT CATS MARKET</h1>
+    <p style="font-size: 1.2em; margin-bottom: 2em;">Эксклюзивные NFT-скины в боевом стиле для прокачки вашего персонажа!</p>
 
-    <div class="product">
-      <img src="https://placekitten.com/300/300" alt="Кот-Самурай" />
+    <div class="product animate__animated animate__fadeInUp">
+      <img src="https://raw.githubusercontent.com/junior03986721/compot-nft/main/images/samurai-cat.png" alt="Кот-Самурай" />
       <div class="product-info">
-        <h2>Кот-Самурай</h2>
+        <h2 title="Боевой NFT с бонусом к удаче">Кот-Самурай</h2>
         <p>Редкий NFT-кот в доспехах эпохи Мэйдзи. Увеличивает харизму и уровень удачи в PvP на 15%.</p>
         <p><strong>Цена: $100</strong></p>
-        <button class="buy-button">Купить за криптовалюту</button>
+        <button class="buy-button" title="Оплатите 100$ в криптовалюте. Адрес ниже.">Купить за криптовалюту</button>
         <p style="margin-top: 0.5em;">Кошелёк: <span id="wallet-address">Загрузка...</span></p>
       </div>
     </div>
 
-    <div class="product">
-      <img src="https://placekitten.com/301/301" alt="Кот-хакер" />
+    <div class="product animate__animated animate__fadeInUp">
+      <img src="https://raw.githubusercontent.com/junior03986721/compot-nft/main/images/hacker-cat.png" alt="Кот-хакер" />
       <div class="product-info">
-        <h2>Кот-хакер</h2>
+        <h2 title="Скрытный NFT-кот со способностями взлома">Кот-хакер</h2>
         <p>Легендарный NFT-кот в худи. Даёт бонус к скрытности и скорости взлома сейфов в игровых мирах.</p>
         <p><strong>Цена: $100</strong></p>
-        <button class="buy-button">Купить за криптовалюту</button>
+        <button class="buy-button" title="Оплатите 100$ в криптовалюте. Адрес ниже.">Купить за криптовалюту</button>
       </div>
     </div>
 
-    <div class="product">
-      <img src="https://placekitten.com/302/302" alt="Киберкотик" />
+    <div class="product animate__animated animate__fadeInUp">
+      <img src="https://raw.githubusercontent.com/junior03986721/compot-nft/main/images/cyber-cat.png" alt="Киберкотик" />
       <div class="product-info">
-        <h2>Киберкотик</h2>
+        <h2 title="Самый стильный кот в метавселенной">Киберкотик</h2>
         <p>Неоновый мех, лазерные глаза. Этот NFT дарует +10 к стилю и включает доступ к VR-арене.</p>
         <p><strong>Цена: $100</strong></p>
-        <button class="buy-button">Купить за криптовалюту</button>
+        <button class="buy-button" title="Оплатите 100$ в криптовалюте. Адрес ниже.">Купить за криптовалюту</button>
       </div>
     </div>
 
